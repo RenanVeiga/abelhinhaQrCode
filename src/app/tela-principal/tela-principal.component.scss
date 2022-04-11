@@ -1,0 +1,29 @@
+.nav {
+  justify-content: space-between;
+  margin: 1%;
+  li{
+    h1{
+      color:rgb(253, 253, 78);
+    }
+  }
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  ul{
+    li{
+      &.darkmode{
+        background-color: white;
+      }
+    }
+  }
+  p{
+    &.darkmode{
+    color: white;
+  }
+  }
+}
+
+

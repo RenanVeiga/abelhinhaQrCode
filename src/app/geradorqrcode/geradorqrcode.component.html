@@ -1,0 +1,23 @@
+
+<div class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 flex-column">
+  <img src="../../assets/abelha.svg" [ngClass]="border">
+  <form class="d-flex flex-wrap justify-content-center align-items-center my-4 flex-column">
+  <input type="text" placeholder="Insira seu link aqui" [(ngModel)]="qrcode" name="qrcode">
+  <button class="btn" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Gerar QR Code</button>
+  </form>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex justify-content-center">
+        <qrcode [qrdata]="qrcode" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+      </div>
+    </div>
+  </div>
+</div>
+
+
